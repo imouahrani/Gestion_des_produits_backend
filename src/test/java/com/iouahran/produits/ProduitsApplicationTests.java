@@ -47,6 +47,59 @@ class ProduitsApplicationTests {
 			System.out.println(p);
 		}
 	}
-
-
+	@Test
+	public void testFindByNomProduit()
+	{
+		List<Produit> prods = produitRepository.findByNomProduit("PC Dell");
+		for (Produit p : prods)
+		{
+			System.out.println(p);
+		}
+	}
+	@Test
+	public void testFindByNomProduitContains ()
+	{
+		List<Produit> prods=produitRepository.findByNomProduitContains("iphone");
+		for (Produit p : prods)
+		{
+			System.out.println(p);
+		}
+	}
+	@Test
+	public void testfindByNomPrix()
+	{
+		List<Produit> prods = produitRepository.findByNomPrix("PC Dell", 2200.5);
+		for (Produit p : prods)
+		{
+			System.out.println(p);
+		}
+	}
+	@Test
+	public void testTrierProduitsNomsPrix()
+	{
+		List<Produit> prods = produitRepository.trierProduitsNomsPrix();
+		for (Produit p : prods)
+		{
+			System.out.println(p);
+		}
+	}
+	@Test
+	public void findByCategorieIdCat()
+	{
+		List<Produit> prods = produitRepository.findByCategorieIdCat(2L);
+		for (Produit p : prods)
+		{
+			System.out.println(p);
+		}
+	}
+	@Test
+	public void testfindByOrderByNomProduitAsc()
+	{
+		List<Produit> prods =
+				produitRepository.findByOrderByNomProduitAsc();
+		for (Produit p : prods)
+		{
+			System.out.println(p);
+		}
+	}
 }
