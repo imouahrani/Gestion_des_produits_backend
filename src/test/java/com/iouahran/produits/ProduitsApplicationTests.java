@@ -80,7 +80,8 @@ class ProduitsApplicationTests {
 		List<Produit> prods = produitRepository.trierProduitsNomsPrix();
 		for (Produit p : prods)
 		{
-			System.out.println(p);
+			System.out.println("Nom produit : "+p.getNomProduit() +" Prix produit : "+p.getPrixProduit());
+
 		}
 	}
 	@Test
@@ -99,7 +100,7 @@ class ProduitsApplicationTests {
 				produitRepository.findByOrderByNomProduitAsc();
 		for (Produit p : prods)
 		{
-			System.out.println(p);
+			System.out.println(p.getNomProduit());
 		}
 	}
 }
