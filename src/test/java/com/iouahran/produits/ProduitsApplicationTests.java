@@ -22,7 +22,7 @@ class ProduitsApplicationTests {
 	@Test
 	public void testFindProduit()
 	{
-		Produit p = produitRepository.findById(2L).get();
+		Produit p = produitRepository.findById(4L).get();
 		System.out.println(p);
 	}
 	@Test
